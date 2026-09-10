@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秘密入口 - 隐藏空间探索指南与隐秘通道知识百科</title>
+<meta name="description" content="秘密入口是一个聚焦隐藏空间、隐秘通道与探索文化的知识型专题站，介绍秘密入口的常见类型、历史背景、探索方法、安全注意事项与常见问题，帮助读者理性理解这一神秘而有趣的概念。">
+<meta name="keywords" content="秘密入口,隐藏入口,隐秘通道,密室探索,隐藏空间,探索指南">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --ink:#1a1c24;
+    --ink-soft:#3a3f4d;
+    --muted:#6b7280;
+    --line:#e3e5ec;
+    --bg:#f6f5f1;
+    --panel:#ffffff;
+    --accent:#6b4bd6;
+    --accent-soft:#efeaff;
+    --gold:#c99a3d;
+    --shadow:0 10px 30px rgba(26,28,36,.08);
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  /* 顶部提示条 */
+  .topbar{
+    background:var(--ink);
+    color:#cfd2dd;
+    font-size:13px;
+    letter-spacing:.02em;
+  }
+  .topbar .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    padding:8px 0;
+    flex-wrap:wrap;
+  }
+  .topbar .dot{
+    display:inline-block;
+    width:7px;height:7px;border-radius:50%;
+    background:var(--gold);
+    margin-right:7px;
+    vertical-align:middle;
+  }
+
+  .wrap{
+    width:min(1160px,92%);
+    margin:0 auto;
+  }
+
+  /* 页眉 */
+  header.site-header{
+    background:var(--panel);
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:50;
+    box-shadow:0 2px 12px rgba(26,28,36,.04);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    padding:14px 0;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .brand-mark{
+    width:44px;height:44px;
+    border-radius:12px;
+    background:linear-gradient(140deg,#6b4bd6,#3a2a86);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:700;font-size:20px;
+    box-shadow:0 6px 16px rgba(107,75,214,.35);
+    flex-shrink:0;
+  }
+  .brand-text h1{
+    font-size:20px;
+    line-height:1.2;
+    letter-spacing:.04em;
+  }
+  .brand-text span{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:.18em;
+  }
+  nav.main-nav ul{
+    display:flex;
+    gap:26px;
+    list-style:none;
+    font-size:15px;
+    color:var(--ink-soft);
+  }
+  nav.main-nav a{
+    position:relative;
+    padding:4px 0;
+    transition:color .2s;
+  }
+  nav.main-nav a::after{
+    content:"";
+    position:absolute;
+    left:0;bottom:-2px;
+    width:0;height:2px;
+    background:var(--accent);
+    transition:width .25s;
+  }
+  nav.main-nav a:hover{color:var(--accent);}
+  nav.main-nav a:hover::after{width:100%;}
+
+  /* 首屏 */
+  .hero{
+    background:
+      radial-gradient(circle at 12% 18%, rgba(107,75,214,.20), transparent 42%),
+      radial-gradient(circle at 88% 82%, rgba(201,154,61,.18), transparent 45%),
+      linear-gradient(160deg,#1c1a2b 0%,#2a2544 60%,#1a1c24 100%);
+    color:#f4f3fa;
+    padding:72px 0 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(255,255,255,.028) 0 2px, transparent 2px 22px);
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.25fr .95fr;
+    gap:48px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+  }
+  .hero-tag{
+    display:inline-block;
+    font-size:13px;
+    letter-spacing:.16em;
+    color:#d9cffb;
+    border:1px solid rgba(217,207,251,.4);
+    border-radius:999px;
+    padding:5px 16px;
+    margin-bottom:22px;
+  }
+  .hero h2{
+    font-size:clamp(28px,4vw,42px);
+    line-height:1.32;
+    letter-spacing:.02em;
+    margin-bottom:20px;
+  }
+  .hero h2 em{
+    font-style:normal;
+    color:#cbb6ff;
+  }
+  .hero p.lead{
+    font-size:16.5px;
+    color:#c9c7d8;
+    max-width:600px;
+    margin-bottom:30px;
+  }
+  .hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:12px 26px;
+    border-radius:999px;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:.03em;
+    transition:transform .2s, box-shadow .2s, background .2s;
+    border:1px solid transparent;
+    cursor:pointer;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,#7a5bf0,#5a3ec9);
+    color:#fff;
+    box-shadow:0 10px 24px rgba(107,75,214,.4);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(107,75,214,.5);}
+  .btn-ghost{
+    background:transparent;
+    color:#e7e3fb;
+    border-color:rgba(231,227,251,.45);
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,.08);transform:translateY(-2px);}
+
+  .hero-panel{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:18px;
+    padding:26px 26px 22px;
+    backdrop-filter:blur(6px);
+  }
+  .hero-panel h3{
+    font-size:15px;
+    letter-spacing:.12em;
+    color:#d9cffb;
+    margin-bottom:16px;
+    font-weight:600;
+  }
+  .hero-panel ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:13px;
+  }
+  .hero-panel li{
+    display:flex;
+    gap:12px;
+    font-size:14.5px;
+    color:#d6d4e4;
+    align-items:flex-start;
+  }
+  .hero-panel li i{
+    flex-shrink:0;
+    width:22px;height:22px;
+    border-radius:7px;
+    background:rgba(203,182,255,.18);
+    color:#cbb6ff;
+    display:flex;align-items:center;justify-content:center;
+    font-style:normal;
+    font-size:12px;
+    font-weight:700;
+    margin-top:3px;
+  }
+
+  /* 通用 section */
+  section.block{
+    padding:64px 0;
+  }
+  .section-head{
+    max-width:760px;
+    margin-bottom:38px;
+  }
+  .section-head .kicker{
+    font-size:13px;
+    letter-spacing:.2em;
+    color:var(--accent);
+    font-weight:700;
+    margin-bottom:10px;
+    display:block;
+  }
+  .section-head h2{
+    font-size:clamp(22px,3vw,30px);
+    line-height:1.4;
+    margin-bottom:14px;
+    letter-spacing:.01em;
+  }
+  .section-head p{
+    color:var(--muted);
+    font-size:15.5px;
+  }
+
+  /* 概念卡片 */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px;
+  }
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px 24px;
+    box-shadow:var(--shadow);
+    transition:transform .22s, box-shadow .22s, border-color .22s;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 36px rgba(26,28,36,.12);
+    border-color:#d5cdf5;
+  }
+  .card .num{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:38px;height:38px;
+    border-radius:11px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    font-weight:700;
+    font-size:15px;
+    margin-bottom:16px;
+  }
+  .card h3{
+    font-size:17.5px;
+    margin-bottom:10px;
+    letter-spacing:.01em;
+  }
+  .card p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  /* 类型列表 */
+  .type-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:18px;
+  }
+  .type-item{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-left:4px solid var(--accent);
+    border-radius:10px;
+    padding:20px 22px;
+    transition:border-color .2s, transform .2s;
+  }
+  .type-item:hover{
+    transform:translateX(4px);
+    border-left-color:var(--gold);
+  }
+  .type-item h3{
+    font-size:16.5px;
+    margin-bottom:8px;
+  }
+  .type-item p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  /* 探索方法 步骤 */
+  .steps{
+    counter-reset:step;
+    display:grid;
+    gap:16px;
+  }
+  .step{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px 24px 22px 78px;
+    position:relative;
+    box-shadow:var(--shadow);
+  }
+  .step::before{
+    counter-increment:step;
+    content:counter(step,decimal-leading-zero);
+    position:absolute;
+    left:22px;top:22px;
+    font-size:20px;
+    font-weight:800;
+    color:var(--accent);
+    letter-spacing:.02em;
+  }
+  .step h3{
+    font-size:16.5px;
+    margin-bottom:7px;
+  }
+  .step p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  /* 安全提示 */
+  .notice{
+    background:linear-gradient(135deg,#fff8ec,#fdf1de);
+    border:1px solid #f0dfc0;
+    border-radius:var(--radius);
+    padding:30px 30px 26px;
+  }
+  .notice h3{
+    font-size:18px;
+    color:#8a6218;
+    margin-bottom:16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .notice h3::before{
+    content:"!";
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:24px;height:24px;
+    border-radius:50%;
+    background:var(--gold);
+    color:#fff;
+    font-size:14px;
+    font-weight:800;
+  }
+  .notice ul{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:14px 28px;
+  }
+  .notice li{
+    font-size:14.5px;
+    color:#6b5323;
+    padding-left:18px;
+    position:relative;
+  }
+  .notice li::before{
+    content:"";
+    position:absolute;
+    left:0;top:11px;
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--gold);
+  }
+
+  /* 双栏：常见场景 + 侧栏 */
+  .split{
+    display:grid;
+    grid-template-columns:1.6fr 1fr;
+    gap:34px;
+    align-items:start;
+  }
+  .scene-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .scene{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px 24px;
+    box-shadow:var(--shadow);
+  }
+  .scene h3{
+    font-size:16.5px;
+    margin-bottom:8px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .scene h3 span{
+    font-size:12px;
+    font-weight:600;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:2px 10px;
+    border-radius:999px;
+    letter-spacing:.04em;
+  }
+  .scene p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  aside.side{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+  .side-box{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px 22px;
+    box-shadow:var(--shadow);
+  }
+  .side-box h3{
+    font-size:16px;
+    margin-bottom:14px;
+    padding-bottom:12px;
+    border-bottom:1px solid var(--line);
+    letter-spacing:.02em;
+  }
+  .side-box ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:11px;
+  }
+  .side-box li{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+  }
+  .side-box li::before{
+    content:"◆";
+    color:var(--accent);
+    font-size:10px;
+    margin-top:7px;
+    flex-shrink:0;
+  }
+  .side-box p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  /* FAQ */
+  .faq{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  details{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:0 22px;
+    box-shadow:var(--shadow);
+    transition:border-color .2s;
+  }
+  details[open]{
+    border-color:#cfc5f0;
+  }
+  summary{
+    cursor:pointer;
+    list-style:none;
+    padding:19px 0;
+    font-size:16px;
+    font-weight:600;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";
+    font-size:20px;
+    color:var(--accent);
+    font-weight:400;
+    transition:transform .25s;
+    flex-shrink:0;
+  }
+  details[open] summary::after{
+    transform:rotate(45deg);
+  }
+  details p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    padding:0 0 20px;
+    border-top:1px dashed var(--line);
+    padding-top:16px;
+  }
+
+  /* 页脚 */
+  footer.site-footer{
+    background:#15161f;
+    color:#9a9db0;
+    padding:52px 0 26px;
+    font-size:14px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1.2fr;
+    gap:34px;
+    padding-bottom:34px;
+    border-bottom:1px solid rgba(255,255,255,.09);
+  }
+  .footer-grid h4{
+    color:#e8e7f2;
+    font-size:15px;
+    margin-bottom:16px;
+    letter-spacing:.04em;
+    font-weight:600;
+  }
+  .footer-grid ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .footer-grid a{
+    color:#9a9db0;
+    transition:color .2s;
+  }
+  .footer-grid a:hover{color:#cbb6ff;}
+  .footer-brand p{
+    line-height:1.8;
+    max-width:300px;
+  }
+  .footer-bottom{
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+    gap:14px;
+    flex-wrap:wrap;
+    font-size:13px;
+    color:#70738a;
+  }
+
+  /* 响应式 */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .split{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    nav.main-nav{display:none;}
+    .header-inner{padding:12px 0;}
+    section.block{padding:48px 0;}
+    .hero{padding:52px 0 46px;}
+    .topbar .wrap{font-size:12px;}
+    .step{padding:20px 20px 20px 66px;}
+    .step::before{left:18px;top:20px;font-size:18px;}
+    .footer-grid{grid-template-columns:1fr;gap:26px;}
+    .notice{padding:24px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><span class="dot"></span>探索未知空间，理性看待隐秘通道</span>
+    <span>内容科普向 · 请遵守法律法规与场所管理规定</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-mark">秘</div>
+      <div class="brand-text">
+        <h1>秘密入口</h1>
+        <span>HIDDEN ENTRANCE</span>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#concept">概念解读</a></li>
+        <li><a href="#types">常见类型</a></li>
+        <li><a href="#method">探索方法</a></li>
+        <li><a href="#scene">典型场景</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-tag">隐藏空间 · 探索文化</span>
+        <h2>什么是<em>秘密入口</em>？<br>一扇门背后的空间与想象</h2>
+        <p class="lead">
+          “秘密入口”通常指那些不易被察觉、需要特定线索或条件才能发现的通道、门洞或空间开口。它可能出现在建筑结构、游戏场景、文学叙事乃至城市街巷中。本页从概念、类型、探索方法和安全边界四个角度，为你系统梳理这一主题。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#concept">开始了解</a>
+          <a class="btn btn-ghost" href="#method">查看探索方法</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <h3>本页内容速览</h3>
+        <ul>
+          <li><i>1</i><span>秘密入口的定义与它为何让人着迷</span></li>
+          <li><i>2</i><span>建筑、游戏、文学、城市空间中常见的入口形态</span></li>
+          <li><i>3</i><span>发现与判断隐藏通道的通用思路</span></li>
+          <li><i>4</i><span>探索时必须守住的安全与法律边界</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 概念解读 -->
+  <section class="block" id="concept">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">CONCEPT</span>
+        <h2>秘密入口：一个横跨现实与虚构的概念</h2>
+        <p>它既可以是真实存在的建筑构造，也可以是叙事作品中的关键设定。理解它的关键在于“隐蔽性”与“可达性”这两个维度。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>隐蔽性</h3>
+          <p>秘密入口之所以“秘密”，在于它与周边环境高度融合，或位于视线盲区、被装饰遮挡，需要观察者主动留意细节才能识别。</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>可达性</h3>
+          <p>仅有隐蔽还不够，入口需要能够被打开、穿过或进入。触发条件可能是机关、钥匙、特定时间，也可能只是一段被忽略的路径。</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>叙事性</h3>
+          <p>在文学、影视与游戏里，秘密入口往往承担转折功能，它把普通空间与未知空间连接起来，制造期待与悬念。</p>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <h3>心理动因</h3>
+          <p>人们被秘密入口吸引，本质上是对“已知之外”的好奇。这种好奇心推动探索，也需要被安全意识和规则意识约束。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见类型 -->
+  <section class="block" id="types" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">TYPES</span>
+        <h2>秘密入口的常见类型</h2>
+        <p>不同语境下的“秘密入口”形态差异很大，以下分类帮助你快速建立整体认知。</p>
+      </div>
+      <div class="type-list">
+        <div class="type-item">
+          <h3>建筑与室内构造类</h3>
+          <p>如可移动书架、暗门、地板夹层、旋转墙体等。它们多见于历史建筑、老宅与部分主题空间，通常与当时的储物、避险或通行需求有关。</p>
+        </div>
+        <div class="type-item">
+          <h3>城市与地下空间类</h3>
+          <p>废弃通道、地下管廊、防空洞出入口、被封闭的旧楼梯等。这类空间结构复杂，且往往涉及产权与安全管制，不宜擅自进入。</p>
+        </div>
+        <div class="type-item">
+          <h3>电子游戏类</h3>
+          <p>游戏中的隐藏房间、彩蛋区域、需要特定操作触发的关卡入口。它们由开发者有意设计，属于游戏体验的一部分。</p>
+        </div>
+        <div class="type-item">
+          <h3>文学与影视类</h3>
+          <p>衣柜、镜子、墙缝、钟表背后等经典意象。它们更多是叙事装置，用来推动情节或象征角色进入新的人生阶段。</p>
+        </div>
+        <div class="type-item">
+          <h3>自然地貌类</h3>
+          <p>岩缝、洞穴口、被植被遮盖的小径等。这类入口受季节与天气影响明显，探索前需要充分评估风险与自身能力。</p>
+        </div>
+        <div class="type-item">
+          <h3>数字与界面类</h3>
+          <p>部分软件与网站中隐藏的调试页面、彩蛋按钮或特殊指令入口。它们通常面向特定用户，普通访问者不一定需要接触。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 探索方法 -->
+  <section class="block" id="method">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">METHOD</span>
+        <h2>发现与判断隐藏通道的通用思路</h2>
+        <p>以下方法适用于观察、研究与合规探索场景，核心原则是：先判断是否允许，再考虑是否进入。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>观察空间的不对称</h3>
+          <p>房间尺寸与外部轮廓不一致、墙面厚度异常、装饰物位置突兀，都是值得留意的线索。先做记录，不急于触碰。</p>
+        </div>
+        <div class="step">
+          <h3>核对公开资料</h3>
+          <p>历史建筑的图纸、地方志、景区导览与官方介绍，往往能解释某处构造的用途。资料比对可以避免把普通结构误判为“秘密入口”。</p>
+        </div>
+        <div class="step">
+          <h3>确认权限与规则</h3>
+          <p>私人住宅、管制区域、施工工地、文物保护单位等场所，未经许可不得进入或触碰任何设施。这是探索的前提条件。</p>
+        </div>
+        <div class="step">
+          <h3>评估安全条件</h3>
+          <p>光线、通风、结构稳定性、通信信号、同伴与应急方案，都是进入任何陌生空间前必须确认的要素。</p>
+        </div>
+        <div class="step">
+          <h3>记录而非破坏</h3>
+          <p>拍照、测绘、文字记录是合适的做法；撬动、拆解、涂写则会破坏空间，也可能触犯法律。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 典型场景 + 侧栏 -->
+  <section class="block" id="scene" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap split">
+      <div>
+        <div class="section-head">
+          <span class="kicker">SCENES</span>
+          <h2>几个典型场景的解读</h2>
+          <p>同样的“入口”概念，在不同场景中的含义和注意事项并不相同。</p>
+        </div>
+        <div class="scene-list">
+          <article class="scene">
+            <h3>老建筑中的暗门 <span>建筑</span></h3>
+            <p>部分老宅、祠堂与近代建筑中确有暗门设计，多用于储物、避险或人员通行。这类构造属于建筑遗产的一部分，参观时应以保护为先，不随意开合。</p>
+          </article>
+          <article class="scene">
+            <h3>游戏中的隐藏关卡 <span>游戏</span></h3>
+            <p>开发者常把彩蛋入口藏在看似无用的角落，通过跳跃、交互或特定顺序触发。这类探索完全在虚拟环境中进行，风险低，乐趣在于解谜过程。</p>
+          </article>
+          <article class="scene">
+            <h3>文学里的象征入口 <span>叙事</span></h3>
+            <p>从童话中的衣柜到奇幻小说里的站台，入口往往象征角色告别旧生活。理解其象征意义，比追究“是否真实存在”更有阅读价值。</p>
+          </article>
+          <article class="scene">
+            <h3>城市中的封闭通道 <span>城市</span></h3>
+            <p>旧楼梯、封堵的巷口、废弃出入口在城市更新中很常见。它们多数已被封闭或纳入管理，擅自进入既危险也不合规，建议通过官方渠道了解历史。</p>
+          </article>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="side-box">
+          <h3>探索前的自检清单</h3>
+          <ul>
+            <li>该场所是否允许进入？</li>
+            <li>是否已告知同伴或家人行程？</li>
+            <li>照明、通信、应急物品是否备齐？</li>
+            <li>是否了解最近的出口与求助方式？</li>
+            <li>是否具备应对突发状况的能力？</li>
+          </ul>
+        </div>
+        <div class="side-box">
+          <h3>关于本页内容</h3>
+          <p>本页以科普与文化解读为目的，不提供任何具体地点坐标、进入方法或规避管理的手段。涉及真实场所的信息，请以官方发布为准。</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 安全提示 -->
+  <section class="block">
+    <div class="wrap">
+      <div class="notice">
+        <h3>安全与合规提示</h3>
+        <ul>
+          <li>不进入私人住宅、管制区域、施工现场与文物保护范围。</li>
+          <li>不破坏门锁、墙体、标识等任何公共或私人设施。</li>
+          <li>不单独行动，不进入通风不良或结构不明的空间。</li>
+          <li>发现可疑或危险情况，及时联系场所管理方或报警。</li>
+          <li>网络上的“探秘攻略”需谨慎对待，注意甄别信息真伪。</li>
+          <li>涉及未成年人的探索活动，应有成年人陪同与指导。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq" style="background:#fff;border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">FAQ</span>
+        <h2>关于秘密入口的常见问题</h2>
+        <p>整理读者最常提出的疑问，帮助你更理性地理解这一主题。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>秘密入口在现实中真的存在吗？</summary>
+          <p>存在，但形态与想象往往不同。历史上确有暗门、夹层、隐蔽通道等建筑构造，多与储物、避险、通行需求相关。它们通常有明确的历史背景和归属，并非可以随意进入的“神秘空间”。</p>
+        </details>
+        <details>
+          <summary>为什么人们会对秘密入口如此着迷？</summary>
+          <p>好奇心与探索欲是主要原因。入口象征着“已知之外”，它把日常空间与未知空间连接起来，激发想象。这种心理在叙事作品中被反复利用，也是解谜类游戏的核心乐趣之一。</p>
+        </details>
+        <details>
+          <summary>看到疑似隐藏通道可以直接进去看看吗？</summary>
+          <p>不建议。首先要判断场所性质与是否获得许可；其次要评估结构安全、通风、照明与应急条件。若属于他人产权或管理区域，擅自进入可能涉及法律问题，也存在人身风险。</p>
+        </details>
+        <details>
+          <summary>游戏里的隐藏入口和现实中的是一回事吗？</summary>
+          <p>不是。游戏中的隐藏入口由开发者设计，触发条件、奖励与规则都在系统内，探索风险低。现实中的入口涉及真实空间、产权与安全，两者只能作为概念上的类比。</p>
+        </details>
+        <details>
+          <summary>想了解某处建筑的历史构造，应该从哪里入手？</summary>
+          <p>可以从地方志、建筑史资料、文物保护单位公开信息、正规导览讲解等渠道入手。若建筑对外开放，可咨询管理方或讲解人员，通常能获得比网络传言更可靠的说明。</p>
+        </details>
+        <details>
+          <summary>如何辨别网络上的“探秘”内容是否可信？</summary>
+          <p>优先看信息来源是否明确、是否引用官方资料、是否鼓励违规行为。凡是渲染刺激、回避安全提示、诱导前往具体地点且不说明权限的内容，都应保持警惕。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>秘密入口</h4>
+        <p>一个聚焦隐藏空间与探索文化的知识型专题页，希望帮助读者在保持好奇心的同时，也守住安全与规则的边界。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#concept">概念解读</a></li>
+          <li><a href="#types">常见类型</a></li>
+          <li><a href="#method">探索方法</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>延伸阅读</h4>
+        <ul>
+          <li><a href="#scene">典型场景</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#concept">心理动因</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>温馨提示</h4>
+        <ul>
+          <li>遵守场所管理规定</li>
+          <li>不进入管制与危险区域</li>
+          <li>安全永远优先于好奇</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 秘密入口 · 内容科普与文化解读</span>
+      <span>请以官方信息为准，理性探索</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 平滑滚动增强：为不支持 scroll-behavior 的环境提供基础回退
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = this.getAttribute('href');
+      if(id.length > 1){
+        var target = document.querySelector(id);
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+  </html>
