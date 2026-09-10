@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玛雅最新-玛雅文明最新考古发现与解读资讯</title>
+<meta name="description" content="玛雅最新栏目汇总玛雅文明相关的考古发现、碑文解读、历法与天文研究进展，梳理玛雅遗址动态与学术观点，帮助读者了解玛雅研究的最新方向与可靠信息来源。">
+<meta name="keywords" content="玛雅最新,玛雅文明,玛雅考古,玛雅历法,玛雅遗址,玛雅研究">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--stone:#1f2a24;
+--stone-2:#2c3a31;
+--jade:#2f7d63;
+--jade-light:#3f9c7c;
+--gold:#c8952f;
+--clay:#b4552f;
+--paper:#f5f1e6;
+--paper-2:#ece5d5;
+--ink:#20261f;
+--ink-soft:#4b544a;
+--line:#d8cfba;
+--radius:10px;
+}
+body{
+font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+background:var(--paper);
+color:var(--ink);
+line-height:1.75;
+font-size:16px;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ---------- 顶部 ---------- */
+.topbar{
+background:var(--stone);
+color:#cfd8cd;
+font-size:13px;
+letter-spacing:.02em;
+}
+.topbar .wrap{
+display:flex;justify-content:space-between;align-items:center;
+min-height:38px;gap:12px;flex-wrap:wrap;
+}
+.topbar span{opacity:.85}
+.topbar .dot{color:var(--gold);margin-right:6px}
+
+header.site-head{
+background:linear-gradient(160deg,#22302a 0%,#2c3f34 55%,#1d2b24 100%);
+color:#f2efe3;
+padding:26px 0 30px;
+border-bottom:4px solid var(--gold);
+position:relative;
+overflow:hidden;
+}
+header.site-head::after{
+content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;
+border:2px dashed rgba(200,149,47,.35);border-radius:50%;
+}
+header.site-head::before{
+content:"";position:absolute;right:60px;bottom:-90px;width:180px;height:180px;
+border:2px solid rgba(47,125,99,.4);border-radius:50%;
+}
+.head-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;position:relative;z-index:2}
+.brand h1{
+font-size:clamp(24px,4vw,36px);
+letter-spacing:.06em;
+font-weight:800;
+line-height:1.3;
+}
+.brand h1 em{
+font-style:normal;
+color:var(--gold);
+}
+.brand p{
+margin-top:8px;font-size:14px;color:#b9c6b8;max-width:560px;
+}
+.head-meta{
+display:flex;gap:10px;flex-wrap:wrap;font-size:13px;
+}
+.head-meta b{
+display:inline-block;padding:5px 12px;border:1px solid rgba(200,149,47,.55);
+border-radius:999px;color:#e6d8b4;font-weight:500;
+}
+
+/* ---------- 导航 ---------- */
+nav.mainnav{
+background:var(--stone-2);
+position:sticky;top:0;z-index:50;
+box-shadow:0 2px 10px rgba(0,0,0,.18);
+}
+nav.mainnav ul{
+display:flex;flex-wrap:wrap;list-style:none;
+}
+nav.mainnav a{
+display:block;padding:13px 18px;font-size:15px;color:#d5ddd3;
+border-bottom:3px solid transparent;
+transition:.2s;
+}
+nav.mainnav a:hover,nav.mainnav a.active{
+color:#fff;background:rgba(47,125,99,.35);border-bottom-color:var(--gold);
+}
+
+/* ---------- 首屏 ---------- */
+.hero{padding:38px 0 10px}
+.hero-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:26px;align-items:stretch}
+.hero-main{
+background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+padding:30px 32px;position:relative;
+border-top:5px solid var(--jade);
+}
+.hero-main .tag{
+display:inline-block;font-size:12px;letter-spacing:.12em;color:#fff;
+background:var(--clay);padding:3px 10px;border-radius:4px;margin-bottom:14px;
+}
+.hero-main h2{
+font-size:clamp(20px,2.6vw,27px);line-height:1.45;margin-bottom:14px;
+}
+.hero-main p{color:var(--ink-soft);font-size:15.5px;margin-bottom:12px}
+.hero-main .quick{
+display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;
+}
+.hero-main .quick a{
+font-size:13.5px;padding:7px 14px;border-radius:999px;
+background:var(--paper-2);border:1px solid var(--line);color:var(--stone);
+transition:.2s;
+}
+.hero-main .quick a:hover{background:var(--jade);color:#fff;border-color:var(--jade)}
+
+.hero-side{
+background:var(--stone);color:#e7e4d8;border-radius:var(--radius);
+padding:24px 24px 20px;display:flex;flex-direction:column;
+}
+.hero-side h3{
+font-size:16px;color:var(--gold);letter-spacing:.08em;margin-bottom:14px;
+padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.14);
+}
+.hero-side ol{list-style:none;counter-reset:n}
+.hero-side li{
+counter-increment:n;position:relative;padding-left:30px;
+margin-bottom:13px;font-size:14.5px;color:#cfd6cc;line-height:1.6;
+}
+.hero-side li::before{
+content:counter(n,decimal-leading-zero);
+position:absolute;left:0;top:1px;font-size:12px;color:var(--jade-light);
+font-weight:700;letter-spacing:.05em;
+}
+.hero-side li a:hover{color:#fff;text-decoration:underline}
+
+/* ---------- 通用区块 ---------- */
+section.block{padding:40px 0 6px}
+.sec-head{
+display:flex;align-items:baseline;justify-content:space-between;
+gap:16px;flex-wrap:wrap;margin-bottom:20px;
+border-bottom:2px solid var(--line);padding-bottom:12px;
+}
+.sec-head h2{
+font-size:21px;letter-spacing:.04em;position:relative;padding-left:14px;
+}
+.sec-head h2::before{
+content:"";position:absolute;left:0;top:4px;bottom:4px;width:5px;
+background:var(--jade);border-radius:3px;
+}
+.sec-head p{font-size:13.5px;color:var(--ink-soft)}
+
+/* ---------- 卡片网格 ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+padding:22px 22px 20px;display:flex;flex-direction:column;
+transition:.22s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(31,42,36,.1);border-color:#c6bc9f}
+.card .cat{
+font-size:12px;color:var(--jade);letter-spacing:.1em;font-weight:700;margin-bottom:9px;
+}
+.card h3{font-size:17px;line-height:1.5;margin-bottom:10px}
+.card p{font-size:14.5px;color:var(--ink-soft);flex:1}
+.card .meta{
+margin-top:14px;font-size:12.5px;color:#8a9184;
+display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+}
+
+/* ---------- 时间线 ---------- */
+.timeline{
+background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+padding:8px 26px 20px;
+}
+.tl-item{
+display:grid;grid-template-columns:120px 1fr;gap:20px;
+padding:20px 0;border-bottom:1px dashed var(--line);
+}
+.tl-item:last-child{border-bottom:none}
+.tl-time{
+font-size:14px;font-weight:700;color:var(--clay);letter-spacing:.03em;
+}
+.tl-body h3{font-size:16.5px;margin-bottom:7px}
+.tl-body p{font-size:14.5px;color:var(--ink-soft)}
+
+/* ---------- 知识解读双栏 ---------- */
+.two-col{display:grid;grid-template-columns:1.3fr 1fr;gap:24px}
+.panel{
+background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+padding:26px 26px 22px;
+}
+.panel h3{
+font-size:18px;margin-bottom:14px;padding-bottom:10px;
+border-bottom:1px solid var(--line);
+}
+.panel h3 small{font-size:12.5px;color:var(--ink-soft);font-weight:400;margin-left:8px}
+.panel p{font-size:15px;color:var(--ink-soft);margin-bottom:12px}
+.panel ul{list-style:none}
+.panel ul li{
+font-size:14.5px;color:var(--ink-soft);padding-left:18px;position:relative;
+margin-bottom:10px;
+}
+.panel ul li::before{
+content:"";position:absolute;left:0;top:9px;width:7px;height:7px;
+background:var(--gold);border-radius:2px;transform:rotate(45deg);
+}
+.panel ul li b{color:var(--ink)}
+
+/* ---------- 术语表 ---------- */
+.glossary{
+display:grid;grid-template-columns:repeat(2,1fr);gap:14px;
+}
+.gloss-item{
+background:var(--paper-2);border-left:4px solid var(--jade);
+border-radius:6px;padding:14px 18px;
+}
+.gloss-item dt{font-weight:700;font-size:15px;margin-bottom:5px}
+.gloss-item dd{font-size:14px;color:var(--ink-soft)}
+
+/* ---------- 指南步骤 ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{
+background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+padding:20px 20px 18px;position:relative;
+}
+.step .num{
+font-size:26px;font-weight:800;color:var(--paper-2);
+position:absolute;right:16px;top:10px;letter-spacing:.02em;
+}
+.step h3{font-size:15.5px;margin-bottom:8px;color:var(--jade);position:relative;z-index:2}
+.step p{font-size:14px;color:var(--ink-soft);position:relative;z-index:2}
+
+/* ---------- FAQ ---------- */
+.faq{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:last-child{border-bottom:none}
+.faq summary{
+cursor:pointer;padding:17px 24px;font-size:15.5px;font-weight:600;
+list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;
+transition:.2s;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+content:"+";font-size:20px;color:var(--jade);font-weight:400;flex-shrink:0;
+}
+.faq details[open] summary{background:var(--paper-2)}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{
+padding:0 24px 18px;font-size:14.5px;color:var(--ink-soft);
+}
+
+/* ---------- 提示条 ---------- */
+.notice{
+margin-top:26px;background:#fdf7e8;border:1px solid #e8d9ae;
+border-left:5px solid var(--gold);border-radius:8px;
+padding:18px 22px;font-size:14.5px;color:#6a5a2e;
+}
+.notice b{color:#8a6b1c}
+
+/* ---------- 页脚 ---------- */
+footer.site-foot{
+margin-top:52px;background:var(--stone);color:#b6c0b4;
+padding:40px 0 26px;font-size:14px;
+border-top:4px solid var(--gold);
+}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.foot-grid h4{font-size:15px;color:#e8e5d8;margin-bottom:12px;letter-spacing:.05em}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin-bottom:8px;font-size:13.5px}
+.foot-grid a:hover{color:#fff;text-decoration:underline}
+.foot-about p{font-size:13.5px;line-height:1.8;color:#9faa9c}
+.foot-bottom{
+margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);
+display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+font-size:12.5px;color:#8d978a;
+}
+
+/* ---------- 响应式 ---------- */
+@media(max-width:980px){
+.hero-grid{grid-template-columns:1fr}
+.cards{grid-template-columns:repeat(2,1fr)}
+.two-col{grid-template-columns:1fr}
+.steps{grid-template-columns:repeat(2,1fr)}
+.foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+body{font-size:15.5px}
+.wrap{padding:0 15px}
+header.site-head{padding:20px 0 24px}
+.head-inner{align-items:flex-start}
+nav.mainnav a{padding:11px 13px;font-size:14px}
+.hero-main{padding:22px 20px}
+.hero-side{padding:20px}
+.cards{grid-template-columns:1fr}
+.steps{grid-template-columns:1fr}
+.glossary{grid-template-columns:1fr}
+.tl-item{grid-template-columns:1fr;gap:6px}
+.tl-time{font-size:13px}
+.foot-grid{grid-template-columns:1fr}
+section.block{padding:30px 0 4px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><i class="dot">◆</i>聚焦玛雅文明考古、碑文与历法研究的资讯整理</span>
+    <span>内容以公开学术资料与博物馆信息为基础，持续更新</span>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <div class="brand">
+      <h1>玛雅<em>最新</em> · 文明研究观察站</h1>
+      <p>这里汇总玛雅文明相关的考古进展、象形文字解读、历法与天文研究成果，以及遗址保护与展览动态，帮助中文读者找到可靠、可追溯的信息线索。</p>
+    </div>
+    <div class="head-meta">
+      <b>考古发现</b>
+      <b>碑文解读</b>
+      <b>历法天文</b>
+      <b>遗址动态</b>
+    </div>
+  </div>
+</header>
+
+<nav class="mainnav">
+  <div class="wrap">
+    <ul>
+      <li><a class="active" href="#overview">研究概览</a></li>
+      <li><a href="#discoveries">考古发现</a></li>
+      <li><a href="#timeline">进展脉络</a></li>
+      <li><a href="#knowledge">知识解读</a></li>
+      <li><a href="#glossary">术语速查</a></li>
+      <li><a href="#guide">阅读指南</a></li>
+      <li><a href="#faq">常见问题</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero" id="overview">
+    <div class="wrap hero-grid">
+      <div class="hero-main">
+        <span class="tag">栏目导览</span>
+        <h2>“玛雅最新”到底在关注什么？</h2>
+        <p>当人们搜索“玛雅最新”，多数是想了解玛雅文明研究近期出现了哪些新发现、新解读，以及这些信息是否可靠。玛雅研究是一个仍在持续推进的领域：考古队在中美洲的丛林与河谷中继续发掘，铭文学家不断修正对碑文的释读，遥感与激光雷达技术让被植被覆盖的古代建筑结构得以显现。</p>
+        <p>本页不做单一事件的断言式报道，而是按主题梳理可核查的研究方向，说明每条线索的来源类型、证据强度与常见误读，方便你判断一条“最新消息”是否值得采信。</p>
+        <div class="quick">
+          <a href="#discoveries">看考古发现方向</a>
+          <a href="#knowledge">看历法与天文解读</a>
+          <a href="#glossary">查常见术语</a>
+          <a href="#faq">辨真假消息</a>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <h3>近期值得留意的方向</h3>
+        <ol>
+          <li><a href="#discoveries">激光雷达测绘揭示被植被覆盖的建筑群与道路系统</a></li>
+          <li><a href="#knowledge">对古典期城邦关系的碑文再释读</a></li>
+          <li><a href="#knowledge">历法周期与天文观测记录的交叉验证</a></li>
+          <li><a href="#discoveries">水利系统与农业适应方式的考古证据</a></li>
+          <li><a href="#timeline">遗址保护、开放与展览的阶段性消息</a></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 考古发现 -->
+  <section class="block" id="discoveries">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>考古发现的主要方向</h2>
+        <p>按研究手段分类，便于区分“新发现”与“旧材料的重新分析”</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="cat">遥感与测绘</span>
+          <h3>激光雷达带来的结构性发现</h3>
+          <p>机载激光雷达能够穿透部分植被，生成地表三维模型，使研究者在不破坏遗址的前提下识别平台、堤道、梯田与防御工事。这类成果常被概括为“发现隐藏城市”，但更准确的表述是：识别出此前未记录的建筑结构与聚落范围。</p>
+          <div class="meta"><span>证据类型：遥感数据</span><span>需结合地面核查</span></div>
+        </article>
+        <article class="card">
+          <span class="cat">发掘与器物</span>
+          <h3>祭祀坑、墓葬与壁画的新材料</h3>
+          <p>正式考古发掘中出土的陶器、玉器、黑曜石制品与壁画残片，为断代和贸易网络研究提供实物依据。此类信息的可靠来源通常是考古机构公告、学术期刊论文与博物馆展览说明。</p>
+          <div class="meta"><span>证据类型：出土实物</span><span>关注发掘报告</span></div>
+        </article>
+        <article class="card">
+          <span class="cat">铭文与图像</span>
+          <h3>石碑与阶梯文字的重读</h3>
+          <p>玛雅象形文字的释读是累积性工作。随着字形对照表与语法理解更新，同一块石碑的纪年、人名或事件描述可能被修正。这类“最新”往往不是新出土，而是旧材料的新解释。</p>
+          <div class="meta"><span>证据类型：文字释读</span><span>关注铭文学论文</span></div>
+        </article>
+        <article class="card">
+          <span class="cat">环境与生业</span>
+          <h3>水利、梯田与气候适应</h3>
+          <p>通过沉积物、花粉、同位素等分析，研究者重建古代的水资源管理与农业策略。这类研究有助于理解玛雅社会如何应对季节性干旱与人口压力，但结论通常带有概率性表述。</p>
+          <div class="meta"><span>证据类型：环境样本</span><span>结论多为区间估计</span></div>
+        </article>
+        <article class="card">
+          <span class="cat">年代测定</span>
+          <h3>放射性碳与树轮校正</h3>
+          <p>碳十四测年配合树轮校正曲线，可对建筑使用期与废弃时间给出时间范围。不同实验室、不同样本的结果可能存在差异，因此单一年代数据不宜当作绝对结论。</p>
+          <div class="meta"><span>证据类型：测年数据</span><span>注意误差范围</span></div>
+        </article>
+        <article class="card">
+          <span class="cat">保护与展示</span>
+          <h3>遗址开放与文物回归</h3>
+          <p>遗址的修缮、限流、数字建档以及流失文物的归还，同样是“玛雅最新”的一部分。这类消息通常由文化遗产管理部门或博物馆发布，措辞相对正式。</p>
+          <div class="meta"><span>证据类型：机构公告</span><span>关注官方渠道</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 进展脉络 -->
+  <section class="block" id="timeline">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>理解“最新”的时间坐标</h2>
+        <p>把零散消息放进研究脉络里，才不容易被夸大标题带偏</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">早期阶段</div>
+          <div class="tl-body">
+            <h3>从探险记录到系统考古</h3>
+            <p>早期关于玛雅的报道多来自旅行者与探险者的见闻，带有较强的想象色彩。随着考古学方法建立，研究逐步转向地层、类型学与年代序列，玛雅文明的复杂性才被系统认识。</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">释读突破期</div>
+          <div class="tl-body">
+            <h3>象形文字从“不解”到“可读”</h3>
+            <p>铭文学的推进使玛雅文字不再只是图案。研究者逐渐确认其表音与表意混合的特征，能够读出统治者姓名、纪年与政治事件，这直接改变了人们对玛雅城邦关系的理解。</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">技术介入期</div>
+          <div class="tl-body">
+            <h3>遥感、地理信息与数字建模</h3>
+            <p>卫星影像、激光雷达与地理信息系统让大范围聚落研究成为可能。研究者可以在区域尺度上讨论人口规模、土地利用与交通网络，而不只依赖单点发掘。</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">当下</div>
+          <div class="tl-body">
+            <h3>多学科协作与公众传播并行</h3>
+            <p>当前的研究常由考古、地质、生态、遗传与材料科学等多领域合作完成。与此同时，公众传播速度加快，标题化表达容易放大结论，读者更需要回到原始来源核对。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 知识解读 -->
+  <section class="block" id="knowledge">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>知识解读：几个常被误读的话题</h2>
+        <p>厘清概念，比追逐耸动说法更有价值</p>
+      </div>
+      <div class="two-col">
+        <div class="panel">
+          <h3>历法 <small>长计历与“2012”的由来</small></h3>
+          <p>玛雅历法体系由多个周期叠加而成，长计历以天数累计记录时间。所谓“2012世界末日”说法，源于对长计历一个周期结束的误读——周期结束意味着进入下一轮，而非文明终结。这一话题至今仍被反复翻炒，属于典型的旧闻新包装。</p>
+          <p>阅读历法相关内容时，建议关注三点：使用的是哪套历法、对应的是哪个周期节点、结论是否来自专业铭文学或天文学研究。</p>
+          <h3 style="margin-top:22px">天文 <small>观测记录与建筑朝向</small></h3>
+          <p>部分玛雅建筑与特定天象存在对应关系，如日出方位或金星周期。这类研究需要结合建筑测量、天文计算与文献记录，单凭“看起来对齐”不足以成立。</p>
+        </div>
+        <div class="panel">
+          <h3>社会结构 <small>城邦、联盟与冲突</small></h3>
+          <p>玛雅并非单一帝国，而是多个政治实体并存、结盟与对抗的区域体系。碑文中常以胜利者视角记录事件，因此解读时需要意识到叙述立场。</p>
+          <ul>
+            <li><b>政治单元：</b>不同城邦各有统治者与地方贵族。</li>
+            <li><b>联盟关系：</b>通过联姻、朝贡与军事合作形成网络。</li>
+            <li><b>记录偏差：</b>战败方往往缺乏留存记录。</li>
+            <li><b>延续性：</b>古典期之后仍有玛雅人群生活与文化活动。</li>
+          </ul>
+          <h3 style="margin-top:18px">生态 <small>并非单纯“消失”</small></h3>
+          <p>把玛雅描述为“神秘消失”并不准确。更稳妥的说法是：部分低地城邦在特定时期经历了政治解体与人口迁移，原因是多因素的，包括环境变化、资源压力与持续冲突等。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 术语表 -->
+  <section class="block" id="glossary">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>术语速查</h2>
+        <p>看到这些词，基本能判断一条消息属于哪类研究</p>
+      </div>
+      <dl class="glossary">
+        <div class="gloss-item">
+          <dt>激光雷达（LiDAR）</dt>
+          <dd>通过激光脉冲测量地表高程的遥感技术，可辅助识别被植被覆盖的建筑与地形改造痕迹。</dd>
+        </div>
+        <div class="gloss-item">
+          <dt>长计历</dt>
+          <dd>以累计天数记录时间的历法体系，常用于石碑纪年，是断代研究的重要线索之一。</dd>
+        </div>
+        <div class="gloss-item">
+          <dt>象形文字</dt>
+          <dd>玛雅文字系统，兼具表音与表意功能，释读工作仍在持续完善中。</dd>
+        </div>
+        <div class="gloss-item">
+          <dt>古典期</dt>
+          <dd>玛雅文明发展的重要阶段，通常以大型城邦兴盛、石碑纪年密集为特征。</dd>
+        </div>
+        <div class="gloss-item">
+          <dt>碳十四测年</dt>
+          <dd>利用有机样本中放射性碳衰减推算年代的方法，结果以区间形式呈现。</dd>
+        </div>
+        <div class="gloss-item">
+          <dt>地层学</dt>
+          <dd>依据堆积层次判断遗存相对年代与形成过程的基本考古方法。</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 阅读指南 -->
+  <section class="block" id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>如何理性阅读“玛雅最新”类消息</h2>
+        <p>四个步骤，降低被标题误导的概率</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="num">01</span>
+          <h3>先看来源</h3>
+          <p>优先查看考古机构、博物馆、学术期刊或高校发布的原始信息，而非二次转述的短视频标题。</p>
+        </div>
+        <div class="step">
+          <span class="num">02</span>
+          <h3>区分新旧</h3>
+          <p>判断是真正的新出土、新数据，还是对旧材料的重新解读，两者价值不同但都值得关注。</p>
+        </div>
+        <div class="step">
+          <span class="num">03</span>
+          <h3>留意措辞</h3>
+          <p>“可能”“推测”“初步分析”是学术表述的常态，若标题使用绝对化断言，需提高警惕。</p>
+        </div>
+        <div class="step">
+          <span class="num">04</span>
+          <h3>交叉核对</h3>
+          <p>同一发现若只有单一来源且缺乏细节，可先记录，等待后续研究报告或同行讨论。</p>
+        </div>
+      </div>
+      <div class="notice">
+        <b>提示：</b>本页内容为研究方向的整理与科普性说明，不构成对任何具体发现、年代或结论的最终认定。涉及具体遗址、文物与年代的信息，请以相关考古机构、博物馆或正式学术出版物为准。
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>常见问题</h2>
+        <p>关于玛雅研究，读者最常提出的疑问</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>“玛雅最新发现”通常指什么？</summary>
+          <div class="ans">一般指近期公布的考古发掘成果、遥感测绘结果、碑文释读修正、年代测定数据或遗址保护动态。不同来源的“新”程度差别很大，有的是首次公布的一手材料，有的只是对已有材料的再解读。</div>
+        </details>
+        <details>
+          <summary>玛雅文明真的“突然消失”了吗？</summary>
+          <div class="ans">这种说法过于简化。更符合研究共识的表述是：部分低地城邦在特定历史阶段出现政治解体与人口迁移，而玛雅人群及其文化传统并未中断，今天中美洲仍有大量玛雅后裔生活。</div>
+        </details>
+        <details>
+          <summary>为什么关于玛雅历法的说法这么多？</summary>
+          <div class="ans">玛雅历法体系本身包含多个周期，结构相对复杂，容易被断章取义。加上“末日”“预言”类叙事传播性强，导致旧话题周期性回热。判断时可关注具体历法名称、周期节点与研究者身份。</div>
+        </details>
+        <details>
+          <summary>激光雷达是否等于直接“发现城市”？</summary>
+          <div class="ans">不完全等同。激光雷达提供的是地表结构数据，能提示可能存在建筑与改造痕迹，但仍需地面调查、采样与年代测定来确认性质与年代。严谨表述会区分“识别出结构”与“确认城市”。</div>
+        </details>
+        <details>
+          <summary>普通读者从哪里获取较可靠的信息？</summary>
+          <div class="ans">可关注博物馆展览说明、考古研究机构的公开报告、高校相关院系的研究动态，以及经过同行评议的学术论文摘要。阅读时留意发布时间、作者单位与引用来源。</div>
+        </details>
+        <details>
+          <summary>本页会持续更新吗？</summary>
+          <div class="ans">本页以栏目形式整理研究方向和阅读方法，属于相对稳定的科普内容。具体事件性消息建议通过权威机构渠道获取，以免因转载造成信息失真。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <h4>玛雅最新 · 文明研究观察站</h4>
+        <p>以公开学术资料与机构信息为基础，整理玛雅文明研究的方向、术语与阅读方法，帮助中文读者建立稳定的信息判断框架。</p>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <ul>
+          <li><a href="#discoveries">考古发现</a></li>
+          <li><a href="#timeline">进展脉络</a></li>
+          <li><a href="#knowledge">知识解读</a></li>
+          <li><a href="#glossary">术语速查</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>阅读支持</h4>
+        <ul>
+          <li><a href="#guide">阅读指南</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#overview">栏目导览</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>信息说明</h4>
+        <ul>
+          <li>内容以科普整理为主</li>
+          <li>具体结论以原始来源为准</li>
+          <li>不传播未经核实的断言</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 玛雅最新 · 文明研究观察站</span>
+      <span>本站内容仅供学习与参考，不构成学术认定或投资建议</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
